@@ -16,7 +16,7 @@ namespace Senai.OPFlix.WebApi.Domains
         }
 
         public virtual DbSet<Categoria> Categoria { get; set; }
-        public virtual DbSet<Lançamentos> Lançamentos { get; set; }
+        public virtual DbSet<Lancamentos> Lancamentos { get; set; }
         public virtual DbSet<Permissao> Permissao { get; set; }
         public virtual DbSet<Plataformas> Plataformas { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
@@ -50,11 +50,11 @@ namespace Senai.OPFlix.WebApi.Domains
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Lançamentos>(entity =>
+            modelBuilder.Entity<Lancamentos>(entity =>
             {
-                entity.HasKey(e => e.IdLançamento);
+                entity.HasKey(e => e.IdLancamento);
 
-                entity.Property(e => e.DataLançamento).HasColumnType("date");
+                entity.Property(e => e.DataLancamento).HasColumnType("date");
 
                 entity.Property(e => e.Nome)
                     .IsRequired()

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.OPFlix.WebApi.Domains;
@@ -13,24 +12,22 @@ namespace Senai.OPFlix.WebApi.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    public class CategoriaController : ControllerBase
+    public class PlataformaController : ControllerBase
     {
-        CategoriaRepository CategoriaRepository = new CategoriaRepository();
-        
-        // [Authorize(Roles = "Administrador")]
+        PlataformaRepository PlataformaRepository = new PlataformaRepository();
+
         [HttpGet]
-        public IActionResult Listar()
+        public IActionResult listar()
         {
-            return Ok(CategoriaRepository.Listar());
+            return Ok(PlataformaRepository.Listar());
         }
 
-        // [Authorize(Roles = "Administrador")]
         [HttpPost]
-        public IActionResult Cadastrar(Categoria categorias)
+        public IActionResult Cadastrar(Plataformas plataformas)
         {
             try
             {
-                CategoriaRepository.Cadastrar(categorias);
+                PlataformaRepository.Cadastrar(plataformas);
                 return Ok();
             }
             catch (Exception ex)
@@ -39,34 +36,31 @@ namespace Senai.OPFlix.WebApi.Controllers
             }
         }
 
-        //[Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
-            Categoria categorias = CategoriaRepository.BuscarPorId(id);
-            if (categorias == null)
+            Plataformas plataformas = PlataformaRepository.BuscarPorId(id);
+            if (plataformas == null)
                 return NotFound();
-            return Ok(categorias);
+            return Ok(plataformas);
         }
 
-       // [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
-            CategoriaRepository.Deletar(id);
+            PlataformaRepository.Deletar(id);
             return Ok();
         }
 
-        //[Authorize(Roles = "Administrador")]
         [HttpPut]
-        public IActionResult Atualizar(Categoria categoria)
+        public IActionResult Atualizar(Plataformas plataformas)
         {
             try
             {
-                Categoria CategoriaBuscada = CategoriaRepository.BuscarPorId(categoria.IdCategoria);
-                if (CategoriaBuscada == null)
+                Plataformas PlataformaBuscada = PlataformaRepository.BuscarPorId(plataformas.IdPlataforma);
+                if (PlataformaBuscada == null)
                     return NotFound();
-                CategoriaRepository.Atualizar(categoria);
+                PlataformaRepository.Atualizar(plataformas);
                 return Ok();
             }
             catch (Exception ex)

@@ -7,28 +7,32 @@ using System.Threading.Tasks;
 
 namespace Senai.OPFlix.WebApi.Repositories
 {
-    public class CategoriaRepository : ICategoriaRepository
+    public class LancamentoRepository : ILancamentoRepository
     {
-        public void Atualizar(Categoria categoria)
+        public void Atualizar(Lancamentos lancamentos)
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                Categoria CategoriaBuscada = ctx.Categoria.FirstOrDefault(x => x.IdCategoria == categoria.IdCategoria);
+                Lancamentos LancamentoBuscado = ctx.Lancamentos.FirstOrDefault(x => x.IdLancamento == lancamentos.IdLancamento);
+                LancamentoBuscado.Nome = lancamentos.Nome;
+                ctx.Lancamentos.Update(LancamentoBuscado);
+                ctx.SaveChanges();
             }
         }
 
-        public Categoria BuscarPorId(int id)
+        public Lancamentos BuscarPorId(int id)
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                return ctx.Categoria.FirstOrDefault(x => x.IdCategoria == id);
+                return ctx.Lancamentos.FirstOrDefault(x => x.IdLancamento == id);
             }
         }
-        public void Cadastrar(Categoria categoria)
+
+        public void Cadastrar(Lancamentos lancamentos)
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                ctx.Categoria.Add(categoria);
+                ctx.Lancamentos.Add(lancamentos);
                 ctx.SaveChanges();
             }
         }
@@ -37,17 +41,17 @@ namespace Senai.OPFlix.WebApi.Repositories
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                Categoria categoria = ctx.Categoria.Find(id);
-                ctx.Categoria.Remove(categoria);
+                Lancamentos lancamentos = ctx.Lancamentos.Find(id);
+                ctx.Lancamentos.Remove(lancamentos);
                 ctx.SaveChanges();
             }
         }
 
-        public List<Categoria> Listar()
+        public List<Lancamentos> Listar()
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                return ctx.Categoria.ToList();
+                return ctx.Lancamentos.ToList();
             }
         }
     }

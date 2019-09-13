@@ -1,4 +1,5 @@
 ﻿using Senai.OPFlix.WebApi.Domains;
+using Senai.OPFlix.WebApi.Interfaces;
 using Senai.OPFlix.WebApi.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Senai.OPFlix.WebApi.Repositories
 {
-    public class UsuarioRepository
-    {
+    public class UsuarioRepository : IUsuarioRepository
+    { 
         public Usuarios BuscarPorEmailESenha(LoginViewModel login)
         {
             using (OpFlixContext ctx = new OpFlixContext())
@@ -18,6 +19,6 @@ namespace Senai.OPFlix.WebApi.Repositories
                     return null;
                 return usuario;
             }
-        } 
+        }
     }
 }

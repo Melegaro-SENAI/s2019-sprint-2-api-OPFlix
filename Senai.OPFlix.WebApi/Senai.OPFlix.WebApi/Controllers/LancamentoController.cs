@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.OPFlix.WebApi.Domains;
@@ -13,24 +12,22 @@ namespace Senai.OPFlix.WebApi.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    public class CategoriaController : ControllerBase
+    public class LancamentoController : ControllerBase
     {
-        CategoriaRepository CategoriaRepository = new CategoriaRepository();
-        
-        // [Authorize(Roles = "Administrador")]
+        LancamentoRepository LancamentoRepository = new LancamentoRepository();
+
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(CategoriaRepository.Listar());
+            return Ok(LancamentoRepository.Listar());
         }
 
-        // [Authorize(Roles = "Administrador")]
         [HttpPost]
-        public IActionResult Cadastrar(Categoria categorias)
+        public IActionResult Cadastrar(Lancamentos lancamentos)
         {
             try
             {
-                CategoriaRepository.Cadastrar(categorias);
+                LancamentoRepository.Cadastrar(lancamentos);
                 return Ok();
             }
             catch (Exception ex)
@@ -39,34 +36,31 @@ namespace Senai.OPFlix.WebApi.Controllers
             }
         }
 
-        //[Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
-            Categoria categorias = CategoriaRepository.BuscarPorId(id);
-            if (categorias == null)
+            Lancamentos lancamentos = LancamentoRepository.BuscarPorId(id);
+            if (lancamentos == null)
                 return NotFound();
-            return Ok(categorias);
+            return Ok(lancamentos);
         }
 
-       // [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
-            CategoriaRepository.Deletar(id);
+            LancamentoRepository.Deletar(id);
             return Ok();
         }
 
-        //[Authorize(Roles = "Administrador")]
         [HttpPut]
-        public IActionResult Atualizar(Categoria categoria)
+        public IActionResult Atualizar(Lancamentos lancamentos)
         {
             try
             {
-                Categoria CategoriaBuscada = CategoriaRepository.BuscarPorId(categoria.IdCategoria);
-                if (CategoriaBuscada == null)
+                Lancamentos LancamentoBuscado = LancamentoRepository.BuscarPorId(lancamentos.IdLancamento);
+                if (LancamentoBuscado == null)
                     return NotFound();
-                CategoriaRepository.Atualizar(categoria);
+                LancamentoRepository.Atualizar(lancamentos);
                 return Ok();
             }
             catch (Exception ex)

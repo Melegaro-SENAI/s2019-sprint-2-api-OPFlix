@@ -12,3 +12,17 @@ C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\Senai.OPFlix.WebApi\Senai
 C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.pdb
 C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.dll
 C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.pdb
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.deps.json
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.runtimeconfig.json
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.runtimeconfig.dev.json
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.dll
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.pdb
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.csprojAssemblyReference.cache
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.RazorAssemblyInfo.cache
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.RazorAssemblyInfo.cs
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.AssemblyInfoInputs.cache
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.AssemblyInfo.cs
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.dll
+C:\Users\47218236812\Desktop\s2019-sprint-2-api_OPFlix\s2019-sprint-2-api-OPFlix\Senai.OPFlix.WebApi\Senai.OPFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OPFlix.WebApi.pdb
